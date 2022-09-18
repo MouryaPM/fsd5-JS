@@ -1,0 +1,82 @@
+1.where to write 
+2.proper variable name 
+3.pascalcase : MyFirstName , camelcase : myFirstName
+4.name1 , nameFirst, my name , my_name
+
+
+1.Variable:
+    - var
+    - let
+    - const
+
+
+Create separate project
+Master/main branch
+
+Create Array of objects - 5 objects 
+[{
+firstName:'abc',
+lastName:'pqr',
+number:,
+likes:['movies','shopping']
+},{},{},{},{}]
+Object property:
+firstName:'',
+lastName:'',
+number:,
+likes:['movies','shopping']
+Create a function findData 
+    will have 2 parameter : 
+        - name - firstName value (person name ex: firstName:'abc' , name='abc')
+        - prop - property name
+findData('abc','lastName')
+
+function:
+1.Find if name exists
+2. If name exists find if the property for that object exists
+3.If property exists then return the value of that property
+4.If property does not exists for found name then return 'No Property found'
+5.If name does not exists then return 'No Such Data'
+
+
+//Assignment 2: 
+Create new repo 
+1.Create an array with multiple objects(7/8 values)  - array name = employee
+2.Object property: id (unique), name:'', age:, designation:'',salary, phone
+
+Questions:
+1.Filter all developer
+2.Filter employee below age 30
+3.Get all employee below age 30 and salary above 70000 (70K)
+4.Find an accountant with salary below 40000(40K)
+5.Find the employee with id 5
+6.get the employee with name Jess
+
+
+
+DOM - document object model
+
+
+<!-- //Assignment 3 -->
+    <form id="form1">
+      First Name : <input type="text" name="firstName" value="Pooja" /><br />
+      Second Name : <input type="text" name="firstName" value="Ruhi" /><br />
+     </form>
+      <!-- //Assignment 4 -->
+      <table id="newTable" border="1">
+        <tr>
+          <td>First Row First Cell</td>
+          <td>First Row Second Cell</td>
+        </tr>
+        <tr>
+          <td>Second Row First Cell</td>
+          <td>Second Row Second Cell</td>
+        </tr>
+      </table>
+    
+ 
+      //Assignment 3
+      // Print All the values entered for input box
+
+      //Assignment 4
+      // create a function to add new rows to table

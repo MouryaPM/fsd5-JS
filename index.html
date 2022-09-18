@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <!-- head -->
+  </head>
+  <body>
+    <!-- html -->
+    <script>
+      var name = "Pooja Mourya";
+      //   var name = "Jess";
+      // modify
+
+      name = "Neha";
+      //  console.log("Var keyword", name);
+      // console.log("New var", name);
+
+      let age = 10;
+      //   let age = 12;
+      age = 13;
+      // console.log("Let keyword", age);
+
+      const color = "green";
+      //   const color = "red";
+      // color = "red";
+      //   console.log("const keyword", color);
+
+      //   Math operators
+      // + , - , / ,* , % , ++ ,--
+
+      let firstNumber = 10;
+      firstNumber += 20; //add
+      firstNumber -= 10; //subtract
+      firstNumber *= 2; //mulitply
+      firstNumber /= 2; //division
+      firstNumber %= 2; //mod
+      firstNumber++; //increment
+      firstNumber--; //decrement
+
+      let message = 'This is first message "About JS".';
+      message += "Next line" + firstNumber;
+
+      let newMessage = "this is message";
+      //   console.log(newMessage.length);
+      //   console.log(newMessage[0]);
+      newMessage[0] = "A";
+      newMessage = "new message changed";
+      //console.log(newMessage);
+
+      //back ticks/ template literals - ``
+      let string = `first line
+        this is second line ${2 + 2}`;
+      //console.log(string);
+
+      //Array - []
+      //single array / 1D array
+      let person = ["Pooja", 20, "green"];
+      //   console.log(person[2]);
+      person[2] = "red";
+      //  console.log(person);
+      //push - add new value at the end of array
+      person.push("new value");
+      // console.log(person);
+      //unshift - works just like push but will add at the start of array
+      person.unshift("added at start");
+      //  console.log(person);
+
+      //remove
+      //pop - remove from the end
+      person.pop();
+      // console.log(person);
+      //shift - removes from start
+      person.shift();
+      // console.log(person);
+      //nested array
+      let multiArray = [["Pooja", "jess"], [10, 20, 30, 40, 50], "green"];
+      //  console.log(multiArray);
+      //console.log(multiArray[0][1]);
+      //functions:
+      //   let sum=10+10
+      //   let finalSum=20+30
+      // let first=10
+      // let second=20
+      // final = first+second
+      function sumFunction(first, second) {
+        //   console.log("this is function console", first + second);
+        return first + second;
+        //
+        //
+      }
+      // let sum = sumFunction(10, 10); //sum of 2 numbers. to the total add 100
+      //  console.log(sum + 100);
+      //  sumFunction(20, 100); //sum of 2 numbers. to the total add 1
+
+      //Global local
+      let myGlobal = 10;
+      function localGlobal() {
+        // let myGlobal = 20;
+        myGlobal = 20;
+        let newValue = 100;
+        return newValue;
+      }
+      //  let myGlobal=10
+      //const newValue = localGlobal();
+      //  console.log(myGlobal);
+      //  console.log(newValue);
+
+      //if else - conditionals
+      // a=10
+      //a==10 , a=='10'- checking if a is 10
+      //a===10 ,
+      function trueOrFalse(value) {
+        //   false===true
+        //10==12
+        //12==12
+        //!- not
+        if (value != 12) return "Value is true";
+        return "Value is false";
+        return value != 12;
+        if (value < 10) return "less";
+        else if (value > 50) return "more";
+
+        //&& AND
+        value = 15;
+        if (value > 10 && value < 20 && value < 10) {
+          return "AND";
+        }
+        // || - OR
+        if (value > 10 || value < 10) {
+        }
+      }
+      // console.log(trueOrFalse(121));
+      //switch
+      function caseWithSwitch(value) {
+        let answer = "";
+        switch (value) {
+          case 1:
+            answer = "First value";
+            break;
+          case 2:
+            answer = "Second value";
+            break;
+          case 3:
+            answer = "Third Value";
+            break;
+          case 4:
+          case 5:
+            answer = "Final Value";
+            break;
+          default:
+            answer = "Not found";
+            break;
+        }
+        return answer;
+      }
+      //  console.log(caseWithSwitch(2));
+
+      //Objects :{}, CRUD - create read update delete
+      // person=['Pooja',10,100,'green']
+      let users = {
+        //   key:value
+        name: "Pooja",
+        likes: 1000,
+        colorName: "green",
+        "last name": "Mourya",
+        1: "new value",
+      };
+      //access
+      //1. dot notation
+      // console.log(users.likes);
+      // console.log(users.name);
+      // //bracket notation
+      // console.log(users[1]);
+      // console.log(users["last name"]);
+      // console.log(users["name"]);
+      // //sort by : name, color, likes
+      let sort = "likes";
+      // console.log(users[sort]);
+      //modify
+      users["name"] = "Neha";
+      //add
+      users.address = "this is new address value";
+      //delete
+      delete users.name;
+      //  console.log(users);
+      //name, age, phone,address - 10
+      let entries = [
+        { name: "Abc", age: "10", phone: "7897897", address: "test" },
+        { name: "pqr", age: "30", phone: "98789798", address: "demo address" },
+        { name: "xyz", age: "3", phone: "98789798", address: "new address" },
+        { name: "ghj", age: "50", phone: "98789798", address: "final address" },
+      ];
+      //  console.log(entries);
+      let nestedObject = {
+        first: {
+          personal: {
+            name: "",
+          },
+          prof: {
+            exp: "",
+            salary: "",
+          },
+          final: "",
+        },
+        second: {
+          personal: {
+            name: "",
+          },
+          prof: {
+            exp: "",
+            salary: "",
+          },
+        },
+      };
+      //  console.log(nestedObject.first.prof.exp);
+      //ternary
+
+      //syntax: condition ? statement if true : statement if false
+
+      function checkEqual(a, b) {
+        // if (a === b) {
+        //   return "equal";
+        // } else {
+        //   return "not equal";
+        // }
+
+        return a === b ? "equal" : "not equal";
+      }
+      function checkNum(num) {
+        // if (num > 0) {
+        //   return "positive";
+        // } else if (num < 0) {
+        //   return "negative";
+        // } else {
+        //   return "zero";
+        // }
+        return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+      }
+      // console.log(checkEqual(10, 100));
+      // console.log(checkNum(-7));
+
+      function calculate() {
+        let math = {
+          pi: 3.14,
+        };
+        Object.freeze(math);
+        math.pi = "abc";
+        //code for calculation
+        return math.pi;
+      }
+      // console.log(calculate());
+
+      let printDate = function () {};
+      //arrow
+
+      let arrowFunction = () => {
+        //code
+        return new Date();
+      };
+      //console.log(arrowFunction());
+      let newArrowFunction = (a) => new Date();
+      //1,3,4,5
+      let finalSum = 10;
+      finalSum = finalSum + 1;
+      finalSum = finalSum + 3;
+
+      let numbers = [1, 2, 3, 4, 5];
+      // console.log(
+      //   numbers.reduce((acc, curr) => {
+      //     return acc * curr;
+      //   })
+      // );
+      //acc=1
+      //curr=2
+      // acc=0
+      // acc=0+1
+      //acc=10
+      //acc=acc+curr
+      //acc=10+1
+      //accumulator
+      //current
+      //operators :
+      //reduce - [1,23,4] =
+
+      // rest operator : combine your single values into array. 1,2,3,4 = [1,2,3,4]
+      //  ...arrayname
+      let sumArray = (...args) => {
+        // let args = [x, y, z,a,b];
+
+        return args.reduce((a, b) => a + b);
+        //reduce - higher order fucntion
+      };
+      //console.log(sumArray(1, 2, 3, 4, 5, 10));
+
+      let days = ["M", "T", "W", "T", ["a", "b"]];
+      // [days array value, 'new data', numbers array value]
+      //spread operator: ...arrayname
+      let finalArray = [...days, "new data", ...numbers];
+      //console.log(finalArray);
+      //destructuring
+      let elements = {
+        firstValue: "abc",
+        secondValue: "pqr",
+        thirdValue: "xyz",
+      };
+      let newElements = {
+        firstValue: "N - abc",
+        secondValue: "N - pqr",
+        thirdValue: "N - xyz",
+      };
+      let first = elements.firstValue;
+      let second = elements.secondValue;
+      let third = elements.thirdValue;
+
+      let { firstValue: e_firstValue, secondValue: e_secondValue } = elements;
+      let { firstValue, secondValue } = newElements;
+      //let e_firstValue=elements.firstValue
+      //let firstValue=newElements.firstValue
+      //  console.log(firstValue, secondValue);
+      //destructure to get tomorrow max
+      let temp = {
+        today: { min: 10, max: 20 },
+        tomorrow: { min: 100, max: 120 },
+      };
+      let {
+        tomorrow: { max: maxTo },
+      } = temp;
+      //   console.log(maxTo);
+      //let []=input
+
+      //Array method : reduce, forEach,filter,find,map
+      let arrayNumber = [2, 3, 4, 5, 6, 7, 8];
+      let output = [];
+      //item=2 , item=3
+      arrayNumber.forEach((item) => {
+        // console.log(item);
+        if (item % 2 == 0) output.push(item);
+      });
+      //  console.log("For each", output);
+
+      //filter
+      let filterData = arrayNumber.filter((item) => item % 2 == 0);
+      //   console.log("Filter", filterData);
+
+      //find
+      let findData = arrayNumber.find((item) => item % 2 == 0);
+      // console.log("Find", findData);
+
+      //map
+      let mapData = arrayNumber.map((item) => {
+        return { item: item % 2 == 0 };
+      });
+      //  console.log("Map", mapData);
+      //object methods
+
+      const colorFlowers = {
+        pink: "lotus",
+        red: "rose",
+        green: "leaves",
+      };
+      //  console.log(colorFlowers);
+      //keys
+      let keys = Object.keys(colorFlowers);
+      // console.log(keys);
+
+      //values:
+      let values = Object.values(colorFlowers);
+      // console.log(values);
+      //pair
+      let pairs = Object.entries(colorFlowers);
+      //  console.log(pairs);
+
+      //String methods:
+      //length
+      let testString = "THIS is test string";
+      console.log(testString.length);
+      console.log(testString.toLowerCase());
+      console.log(testString.toUpperCase());
+      //name='abc' age=10
+      let words = testString.split(" ");
+      console.log(words);
+      let newStr = words.join("-");
+      console.log(newStr);
+      //email:
+      let email = "johnmail.com";
+      console.log(email.includes("@"), email.includes(".com"));
+    </script>
+  </body>
+</html>
+<!-- <script> .....   </script> -->

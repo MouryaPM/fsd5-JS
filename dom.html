@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dom</title>
+    <style>
+      div {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+      }
+      .colorCss {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body onclick="newAlert()">
+    <h2>DOM Object</h2>
+    <p id="firstpara">this para</p>
+    <p id="secondpara">Color Change JS</p>
+    <!-- classname  html-->
+    <div class="firstdiv">Element 1</div>
+    <div class="firstdiv">Element 2</div>
+    <!-- classname css -->
+    <div class="cssdiv">
+      <p>this is paragraph 1</p>
+    </div>
+    <div class="cssdiv color">
+      <p>this is paragraph 2</p>
+    </div>
+    <div class="cssdiv">
+      <p>this is paragraph 3</p>
+    </div>
+    <p>First User: <input type="text" name="firstname" value="Pooja" /></p>
+    <p>Second User: <input type="text" name="firstname" value="Ruhi" /></p>
+
+    <ul>
+      <li>Tea</li>
+      <li>Coffee</li>
+      <li>Juice</li>
+    </ul>
+    <li>This outer</li>
+    <input type="text" value="input field" />
+    <button>Click</button>
+    <p id="print"></p>
+
+    <h1 id="addAtrib">this is h1 tag</h1>
+    <button onclick="changeAttribute()">Add</button>
+    <button onclick="styleAttribute()">Style</button>
+    <br />
+    <br />
+    <a id="firstAnchor">Google</a>
+    <button onclick="addHref()">Add Href</button>
+    <br />
+    <br />
+    <div id="elementDiv" style="padding: 10px; background-color: #ccc">
+      <h3>Div element</h3>
+    </div>
+    <script>
+      //createElement
+      const para = document.createElement("p");
+      para.innerText = "This is JS paragraph";
+      document.body.appendChild(para);
+
+      // const divpara = document.createElement("p");
+      // divpara.innerText = "This is JS paragraph";
+      const button = document.createElement("button");
+      button.innerHTML = "Click button";
+      document.getElementById("elementDiv").appendChild(button);
+
+      //createAttribute
+      function changeAttribute() {
+        const attr = document.createAttribute("class");
+        //class=
+        attr.value = "colorCss";
+        document.getElementById("addAtrib").setAttributeNode(attr);
+      }
+      function styleAttribute() {
+        const attr = document.createAttribute("style");
+        //style= color:red
+        attr.value = "color:green";
+        document.getElementById("addAtrib").setAttributeNode(attr);
+      }
+      function addHref() {
+        const attr = document.createAttribute("href");
+        attr.value = "https://www.google.com";
+
+        document.getElementById("firstAnchor").setAttributeNode(attr);
+      }
+      //activeElement
+
+      function newAlert() {
+        //  alert("First Alert");
+        const activeelement = document.activeElement.tagName;
+        document.getElementById("print").innerHTML = activeelement;
+      }
+      //getElementsByTagName
+      const liElements = document.getElementsByTagName("li");
+      //  console.log(liElements[1].innerHTML);
+      const allTag = document.getElementsByTagName("*");
+      //console.log(allTag);
+      //getElementsByName
+      let elements = document.getElementsByName("firstname");
+      //  console.log(elements[0].tagName);
+      //console.log(elements.length);
+      //console.log(elements[1].value);
+
+      //getElementsByClassName
+      const collection = document.getElementsByClassName("firstdiv");
+      //console.log(collection);
+      collection[0].innerHTML = "Element data changed";
+      for (let i = 0; i < collection.length; i++) {
+        collection[i].style.backgroundColor = "yellow";
+      }
+
+      const csscollection = document.getElementsByClassName("cssdiv color");
+      // console.log(csscollection);
+      csscollection[0].style.backgroundColor = "red";
+
+      //console.log(document);
+      //getElementById
+      //  console.log(document.getElementById("firstpara"));
+      document.getElementById("firstpara").innerHTML = "Hello World";
+      let secondpara = document.getElementById("secondpara");
+      // console.log(secondpara);
+      secondpara.style.color = "red";
+    </script>
+  </body>
+</html>
